@@ -1,0 +1,10 @@
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\bin\Debug\fabrica.exe.config
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\bin\Debug\fabrica.exe
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\bin\Debug\fabrica.pdb
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\obj\Debug\fabrica.csproj.AssemblyReference.cache
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\obj\Debug\fabrica.Form1.resources
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\obj\Debug\fabrica.Properties.Resources.resources
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\obj\Debug\fabrica.csproj.GenerateResource.cache
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\obj\Debug\fabrica.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\obj\Debug\fabrica.exe
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\obj\Debug\fabrica.pdb
