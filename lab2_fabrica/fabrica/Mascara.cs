@@ -1,19 +1,22 @@
 ﻿using System;
 using System.Drawing;
-using System.Text;
+using System.Runtime.Serialization;
 
 namespace fabrica
 {
+    [DataContract]
     public class Mascara:DecorativeCosmetics
     {
+        [DataMember]
         private String brushType;
-        public Mascara(String name, String brand, double price, int shade, String texture, String brushType): base(name, brand, price, shade, texture)
+        public Mascara(String name, String brand, double price, String shade, String texture, String brushType): base(name, brand, price, shade, texture)
         {
             this.brushType = brushType;
         }
-        public String getBrush() { return brushType; }
-        public void setBrush(String brushType) { this.brushType = brushType; }
-
+        public String Brush { 
+            get => brushType;
+            set => brushType = value;
+        }
         public override Bitmap Img()
         {
             return (Bitmap)Bitmap.FromFile(".//img//mascara.png");
@@ -21,14 +24,14 @@ namespace fabrica
 
         public override string getinfo()
         {
-            StringBuilder sb = new StringBuilder();
-            sb.Append(name + "\n");
-            sb.Append("Brand: " + brand + "\n");
-            sb.Append("Price: " + price + "$" + "\n");
-            sb.Append("Shade: " + shade + "\n");
-            sb.Append("Texture: " + texture + "\n");
-            sb.Append("brushType: " + brushType + "\n");
-            return sb.ToString();
+            String info =
+            "Name: " + name + "\r\n" +
+            "Brand: " + brand + "\r\n" +
+            "Price: " + price + "$" + "\r\n" +
+            "Shade: " + shade + "\r\n" +
+            "Texture: " + texture + "\r\n" +
+            "brushType: " + brushType + "\r\n";
+            return info;
         }
     }
 }

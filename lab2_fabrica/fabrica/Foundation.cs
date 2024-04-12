@@ -1,33 +1,43 @@
 ﻿using System;
 using System.Drawing;
-using System.Text;
+using System.Runtime.Serialization;
 
 namespace fabrica
 {
+    [DataContract]
+
     public class Foundation : DecorativeCosmetics
     {
+        [DataMember]
         private  String coverage;
+        [DataMember]
         private  String finish;
 
-        public Foundation(String name, String brand, double price, String coverage, String finish,  int shade, String texture): base(name, brand, price, shade, texture)
+        public Foundation(String name, String brand, double price, String coverage, String finish,  String shade, String texture): base(name, brand, price, shade, texture)
         {
             this.coverage = coverage;
             this.finish = finish;
         }
-        public String getCoverage() { return coverage; }
-        public String getFinish() { return finish; }
+        public String Coverage { 
+            get{ return coverage; }
+            set { coverage = value; }
+        }
+        public String Finish
+        {
+            get { return finish; }
+            set { finish = value; }
+        }
 
         public override string getinfo()
         {
-            StringBuilder sb = new StringBuilder();
-            sb.Append(name + "\n");
-            sb.Append("Brand: " + brand + "\n");
-            sb.Append("Price: " + price + "$" + "\n");
-            sb.Append("Shade: " + shade + "\n");
-            sb.Append("Texture: " + texture + "\n");
-            sb.Append("Coverage: " + coverage+ "\n");
-            sb.Append("Finish: " + finish + "\n");
-            return sb.ToString();
+            String info = "Name: " + name + "\r\n" +
+                "Brand: " + brand + "\r\n" +
+                "Price: " + price + "$" + "\r\n" +
+                "Shade: " + shade + "\r\n" +
+                "Texture: " + texture + "\r\n" +
+                "Coverage: " + coverage + "\r\n" +
+                "Finish: " + finish + "\r\n";
+            return info;
         }
 
         public override Bitmap Img()

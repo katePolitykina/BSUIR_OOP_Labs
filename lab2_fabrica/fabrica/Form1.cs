@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
 using System.Windows.Forms;
 
 namespace fabrica
@@ -12,14 +15,15 @@ namespace fabrica
         private int clickIndx;
         private Graphics g;
         private int size = 0;
-        private int objArrSize = 10;
         private int line1 = 140;
         private int line2 = 320;
+        private int picHeight = 140;
+        private int picWidth = 60;
         public Form1()
         {
 
             InitializeComponent();
-            objArr = new Coord[objArrSize];
+            objArr = new Coord[10];
             g = pbMain.CreateGraphics();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             DrawArr();
@@ -72,15 +76,15 @@ namespace fabrica
             {
                 double cost;
                 if (double.TryParse(tbprice.Text.Replace('.', ','), out cost))
-                {
-                    objArr[size++] = new Coord(factory.Create(tbName.Text, tbBrand.Text, cost), 0, 0, cmbBox.SelectedIndex);    
-                    if (size == objArrSize)
+                {  
+                    if (size == objArr.Length)
                     {
-                        objArrSize *= 2;
+                        int objArrSize = objArr.Length*2+1;
                         var tempArr = new Coord[objArrSize];
                         objArr.CopyTo(tempArr, 0);
                         objArr = tempArr;
                     }
+                    objArr[size++] = new Coord(factory.Create(tbName.Text, tbBrand.Text, cost), 0, 0, cmbBox.SelectedIndex);
                     DrawArr();
                     
                 }
@@ -97,13 +101,13 @@ namespace fabrica
         {
             if (clicked)
             {
-                objArr[clickIndx].x = e.X - Coord.width / 2;
+                objArr[clickIndx].x = e.X - picWidth / 2;
                 if(e.Y < line1)
                 {
-                    objArr[clickIndx].y = line1-Coord.height;
+                    objArr[clickIndx].y = line1-picHeight;
                 } else
                 {
-                    objArr[clickIndx].y = line2 - Coord.height;
+                    objArr[clickIndx].y = line2 - picHeight;
                 }
                 clicked = false;
                 DrawArr();
@@ -112,15 +116,11 @@ namespace fabrica
             {
                 for (int i = 0; i < size; i++)
                 {
-                    if (e.X >= objArr[i].x && e.X <= (objArr[i].x + Coord.width))
+                    if (e.X >= objArr[i].x && e.X <= (objArr[i].x + picWidth))
                     {
-                        if (e.Y >= objArr[i].y && e.Y <= (objArr[i].y + Coord.height))
+                        if (e.Y >= objArr[i].y && e.Y <= (objArr[i].y + picHeight))
                         {
-                            
-                            tbBrand.Text = objArr[i].self.getBrand();
-                            tbName.Text = objArr[i].self.getName();
-                            tbprice.Text = objArr[i].self.getPrice().ToString();
-                            cmbBox.SelectedIndex = objArr[i].nameToShow;
+                            tbInf.Text = objArr[i].self.getinfo();
                             clickIndx = i;
                             clicked = true;
                         }
@@ -139,6 +139,83 @@ namespace fabrica
                 }
                 objArr[size - 1] = null;
                 size--;
+                clicked = false;
+            }
+            DrawArr();
+        }
+
+        private void btnSerialize_Click(object sender, EventArgs e)
+        {
+            if (rbBinary.Checked)
+            {
+                DataContractSerializer serializer = new DataContractSerializer(typeof(Coord[]));
+                Coord[] data = new Coord[size];
+                Array.Copy(objArr, data, size);
+                using (FileStream stream = new FileStream("suda.bin", FileMode.Create))
+                {
+                    serializer.WriteObject(stream, data);
+                }
+            }
+            else
+            {
+                DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(Coord[]));
+                using (FileStream stream = new FileStream("suda.json", FileMode.Create))
+                {
+                    serializer.WriteObject(stream, objArr);
+                }
+            }
+
+        }
+
+        private void btnDeserialize_Click(object sender, EventArgs e)
+        {
+            if (rbBinary.Checked)
+            {
+                DataContractSerializer serializer = new DataContractSerializer(typeof(Coord[]));
+                try
+                {
+                    using(FileStream stream = new FileStream("suda.bin", FileMode.OpenOrCreate))
+                    {
+                        objArr = (Coord[])serializer.ReadObject(stream);
+                    }      
+                    size = objArr.Length;
+                    DrawArr();
+                }catch
+                {
+                    MessageBox.Show("Файл для с данными для десериализации не существует или поврежден.\n");
+                }
+            }
+            else
+            {
+                DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(Coord[]));
+                try
+                {
+                    using (FileStream stream = new FileStream("suda.json", FileMode.OpenOrCreate))
+                    {
+                        objArr = (Coord[])serializer.ReadObject(stream);
+                    }
+                    size = objArr.Length;
+                    DrawArr();
+                }
+                catch
+                {
+                    MessageBox.Show("Файл для с данными для десериализации не существует или поврежден.\n");
+                }
+                
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (clicked)
+            {
+                using (var editForm = new EditForm(objArr[clickIndx].self))
+                {
+                    editForm.ShowDialog();
+                    //          objArr[clickIndx].self = editForm.objectToEdit;
+                }
+
+                tbInf.Text = objArr[clickIndx].self.getinfo();
                 clicked = false;
             }
             DrawArr();
