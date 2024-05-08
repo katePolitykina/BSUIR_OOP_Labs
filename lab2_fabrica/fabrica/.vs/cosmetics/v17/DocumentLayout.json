@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\fabrica\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1413CCF1-F4D3-44D4-9B48-E5FFD3F4F435}|..\\Signature\\Signature.csproj|\\\\mac\\home\\documents\\oop\\lab2_fabrica\\signature\\signature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC321C23-C738-476A-8BC5-9B661BD53251}|..\\BrushPlugin\\BrushPlugin.csproj|\\\\mac\\home\\documents\\oop\\lab2_fabrica\\brushplugin\\brush.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93CBA443-BCC1-47FE-9C71-5B5A5EECEC06}|cosmetics.csproj|\\\\mac\\home\\documents\\oop\\lab2_fabrica\\fabrica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93CBA443-BCC1-47FE-9C71-5B5A5EECEC06}|cosmetics.csproj|\\\\mac\\home\\documents\\oop\\lab2_fabrica\\fabrica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\SignedBrushPlugin\\Parameters.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93CBA443-BCC1-47FE-9C71-5B5A5EECEC06}|cosmetics.csproj|\\\\mac\\home\\documents\\oop\\lab2_fabrica\\fabrica\\pluginloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\fabrica\\bin\\Debug\\suda.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{dcc4ea97-1c0c-482b-b205-e541c0df9728}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{dcc4ea97-1c0c-482b-b205-e541c0df9728}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Parameters.json",
+              "DocumentMoniker": "\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\SignedBrushPlugin\\Parameters.json",
+              "RelativeDocumentMoniker": "..\\SignedBrushPlugin\\Parameters.json",
+              "ToolTip": "\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\SignedBrushPlugin\\Parameters.json",
+              "RelativeToolTip": "..\\SignedBrushPlugin\\Parameters.json",
+              "ViewState": "AQIAAAAAAABAMzMzMzPrvwIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-29T06:45:50.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PluginLoader.cs",
+              "DocumentMoniker": "\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\fabrica\\PluginLoader.cs",
+              "RelativeDocumentMoniker": "PluginLoader.cs",
+              "ToolTip": "\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\fabrica\\PluginLoader.cs",
+              "RelativeToolTip": "PluginLoader.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAAABkAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-28T21:06:09.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\fabrica\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\fabrica\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T06:26:34.491Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Signature.cs",
+              "DocumentMoniker": "\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\Signature\\Signature.cs",
+              "RelativeDocumentMoniker": "..\\Signature\\Signature.cs",
+              "ToolTip": "\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\Signature\\Signature.cs",
+              "RelativeToolTip": "..\\Signature\\Signature.cs",
+              "ViewState": "AQIAAAYAAAAAYGZmZuYswA4AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T06:17:19.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\fabrica\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\fabrica\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAAOcAAAAAAAAAAAAUwO4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T08:28:22.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "suda.json",
+              "DocumentMoniker": "\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\fabrica\\bin\\Debug\\suda.json",
+              "RelativeDocumentMoniker": "bin\\Debug\\suda.json",
+              "ToolTip": "\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\fabrica\\bin\\Debug\\suda.json",
+              "RelativeToolTip": "bin\\Debug\\suda.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAACOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-24T07:18:12.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Brush.cs",
+              "DocumentMoniker": "\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\BrushPlugin\\Brush.cs",
+              "RelativeDocumentMoniker": "..\\BrushPlugin\\Brush.cs",
+              "ToolTip": "\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\BrushPlugin\\Brush.cs",
+              "RelativeToolTip": "..\\BrushPlugin\\Brush.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAswCQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T17:43:57.13Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

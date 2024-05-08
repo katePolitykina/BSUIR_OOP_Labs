@@ -1,4 +1,4 @@
-﻿namespace fabrica
+﻿namespace cosmetics
 {
     partial class Form1
     {
@@ -6,7 +6,6 @@
         /// Обязательная переменная конструктора.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private int Line = 30;
 
         /// <summary>
         /// Освободить все используемые ресурсы.
@@ -46,19 +45,17 @@
             this.gbCerealizationType = new System.Windows.Forms.GroupBox();
             this.rbJson = new System.Windows.Forms.RadioButton();
             this.rbBinary = new System.Windows.Forms.RadioButton();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.pluginsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbMain)).BeginInit();
             this.gbCerealizationType.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbBox
             // 
             this.cmbBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cmbBox.FormattingEnabled = true;
-            this.cmbBox.Items.AddRange(new object[] {
-            "Mascara",
-            "Mask",
-            "Serum",
-            "Foundation"});
             this.cmbBox.Location = new System.Drawing.Point(12, 46);
             this.cmbBox.Name = "cmbBox";
             this.cmbBox.Size = new System.Drawing.Size(411, 39);
@@ -228,6 +225,25 @@
             this.rbBinary.Text = "Binary";
             this.rbBinary.UseVisualStyleBackColor = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pluginsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1826, 40);
+            this.menuStrip1.TabIndex = 15;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // pluginsToolStripMenuItem
+            // 
+            this.pluginsToolStripMenuItem.Name = "pluginsToolStripMenuItem";
+            this.pluginsToolStripMenuItem.Size = new System.Drawing.Size(111, 36);
+            this.pluginsToolStripMenuItem.Text = "Plugins";
+            this.pluginsToolStripMenuItem.Click += new System.EventHandler(this.pluginsToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -249,11 +265,15 @@
             this.Controls.Add(this.tbprice);
             this.Controls.Add(this.pbMain);
             this.Controls.Add(this.cmbBox);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pbMain)).EndInit();
             this.gbCerealizationType.ResumeLayout(false);
             this.gbCerealizationType.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,6 +299,8 @@
         private System.Windows.Forms.GroupBox gbCerealizationType;
         private System.Windows.Forms.RadioButton rbJson;
         private System.Windows.Forms.RadioButton rbBinary;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem pluginsToolStripMenuItem;
     }
 }
 

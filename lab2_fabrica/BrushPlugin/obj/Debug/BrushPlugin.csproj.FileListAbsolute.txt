@@ -1,0 +1,9 @@
+\\Mac\Home\Documents\oop\lab2_fabrica\BrushPlugin\bin\Debug\BrushPlugin.dll
+\\Mac\Home\Documents\oop\lab2_fabrica\BrushPlugin\bin\Debug\BrushPlugin.pdb
+\\Mac\Home\Documents\oop\lab2_fabrica\BrushPlugin\bin\Debug\CosmeticsBase.dll
+\\Mac\Home\Documents\oop\lab2_fabrica\BrushPlugin\bin\Debug\CosmeticsBase.pdb
+\\Mac\Home\Documents\oop\lab2_fabrica\BrushPlugin\obj\Debug\BrushPlugin.csproj.AssemblyReference.cache
+\\Mac\Home\Documents\oop\lab2_fabrica\BrushPlugin\obj\Debug\BrushPlugin.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\oop\lab2_fabrica\BrushPlugin\obj\Debug\BrushPlu.4910E19C.Up2Date
+\\Mac\Home\Documents\oop\lab2_fabrica\BrushPlugin\obj\Debug\BrushPlugin.dll
+\\Mac\Home\Documents\oop\lab2_fabrica\BrushPlugin\obj\Debug\BrushPlugin.pdb

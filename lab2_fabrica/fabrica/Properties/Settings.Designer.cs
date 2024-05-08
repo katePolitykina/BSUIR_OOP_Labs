@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace fabrica.Properties
+namespace cosmetics.Properties
 {
 
 

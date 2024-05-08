@@ -1,0 +1,6 @@
+\\Mac\Home\Documents\oop\lab2_fabrica\CosmeticsBase\bin\Debug\CosmeticsBase.dll
+\\Mac\Home\Documents\oop\lab2_fabrica\CosmeticsBase\bin\Debug\CosmeticsBase.pdb
+\\Mac\Home\Documents\oop\lab2_fabrica\CosmeticsBase\obj\Debug\CosmeticsBase.csproj.AssemblyReference.cache
+\\Mac\Home\Documents\oop\lab2_fabrica\CosmeticsBase\obj\Debug\CosmeticsBase.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\oop\lab2_fabrica\CosmeticsBase\obj\Debug\CosmeticsBase.dll
+\\Mac\Home\Documents\oop\lab2_fabrica\CosmeticsBase\obj\Debug\CosmeticsBase.pdb

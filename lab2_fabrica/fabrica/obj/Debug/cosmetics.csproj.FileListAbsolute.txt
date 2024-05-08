@@ -1,0 +1,16 @@
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\obj\Debug\cosmetics.csproj.AssemblyReference.cache
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\obj\Debug\cosmetics.EditForm.resources
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\obj\Debug\cosmetics.Form1.resources
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\obj\Debug\fabrica.Properties.Resources.resources
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\obj\Debug\cosmetics.csproj.GenerateResource.cache
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\obj\Debug\cosmetics.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\obj\Debug\fabrica.exe
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\obj\Debug\fabrica.pdb
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\bin\Debug\fabrica.exe.config
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\bin\Debug\fabrica.exe
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\bin\Debug\fabrica.pdb
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\bin\Debug\CosmeticsBase.dll
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\bin\Debug\CosmeticsBase.pdb
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\obj\Debug\cosmetics.csproj.Up2Date
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\bin\Debug\Signature.dll
+\\Mac\Home\Documents\oop\lab2_fabrica\fabrica\bin\Debug\Signature.pdb

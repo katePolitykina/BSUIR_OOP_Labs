@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Reflection;
 using System.Windows.Forms;
-
-namespace fabrica
+using CosmeticsBase;
+namespace cosmetics
 {
     public partial class EditForm : Form
     {

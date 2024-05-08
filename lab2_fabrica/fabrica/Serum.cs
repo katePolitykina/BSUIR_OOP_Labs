@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.Runtime.Serialization;
-using System.Text;
 
-namespace fabrica
+
+namespace cosmetics
 {
     [DataContract]   
 
@@ -30,7 +30,7 @@ namespace fabrica
             set => speedOfAction = value;
         }
 
-        public override string getinfo()
+        public override String getinfo()
         {
             String info =
             "Name: " + name + "\r\n" +

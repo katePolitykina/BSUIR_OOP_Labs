@@ -1,6 +1,7 @@
 ﻿using System.Runtime.Serialization;
+using CosmeticsBase;
 
-namespace fabrica
+namespace cosmetics
 {
     [DataContract]
     public class Coord

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
-
-namespace fabrica
+using CosmeticsBase;
+namespace cosmetics
 {
   
     [DataContract]

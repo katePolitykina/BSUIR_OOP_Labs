@@ -1,15 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using System.Windows.Forms;
+using CosmeticsBase;
+using fabrica;
+using Signature;
 
-namespace fabrica
+
+namespace cosmetics
 {
     public partial class Form1 : Form
     {
         private Factory factory;
+        private List<Factory> factories;
         private Coord[] objArr;
         private bool clicked = false;
         private int clickIndx;
@@ -27,29 +33,23 @@ namespace fabrica
             g = pbMain.CreateGraphics();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             DrawArr();
+            factories = new List<Factory>();
+            factories.Add(new MascaraFactory());
+            factories.Add(new MaskFactory());
+            factories.Add(new SerumFactory());
+            factories.Add(new FoundationFactory());
+            foreach (Factory fact in factories)
+            {
+                cmbBox.Items.Add(fact.Name());
+            }
 
-       }
+        }
 
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (cmbBox.SelectedIndex)
-            {
-                case 0:
-                    factory = new MascaraFactory();
-                    break;
-                case 1:
-                    factory = new MaskFactory();
-                    break;
-                case 2:
-                    factory = new SerumFactory();
-                    break;
-                case 3:
-                    factory = new FoundationFactory();
-                    break;
-            }
+        { 
+            factory = factories[cmbBox.SelectedIndex];
         }
-
         private void DrawLines()
         {
             Pen pen = new Pen(Color.Red, 4);
@@ -146,11 +146,16 @@ namespace fabrica
 
         private void btnSerialize_Click(object sender, EventArgs e)
         {
+            Coord[] data = new Coord[size];
+            Array.Copy(objArr, data, size);
+            var knownTypes = new List<Type>();
+            foreach (var fact in factories)
+            {
+                knownTypes.Add(fact.CreatedClassName());
+            }
             if (rbBinary.Checked)
             {
-                DataContractSerializer serializer = new DataContractSerializer(typeof(Coord[]));
-                Coord[] data = new Coord[size];
-                Array.Copy(objArr, data, size);
+                DataContractSerializer serializer = new DataContractSerializer(typeof(Coord[]),knownTypes);
                 using (FileStream stream = new FileStream("suda.bin", FileMode.Create))
                 {
                     serializer.WriteObject(stream, data);
@@ -158,10 +163,10 @@ namespace fabrica
             }
             else
             {
-                DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(Coord[]));
+                DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(Coord[]),knownTypes);
                 using (FileStream stream = new FileStream("suda.json", FileMode.Create))
                 {
-                    serializer.WriteObject(stream, objArr);
+                    serializer.WriteObject(stream, data);
                 }
             }
 
@@ -169,9 +174,14 @@ namespace fabrica
 
         private void btnDeserialize_Click(object sender, EventArgs e)
         {
+            var knownTypes = new List<Type>();
+            foreach (var fact in factories)
+            {
+                knownTypes.Add(fact.CreatedClassName());
+            }
             if (rbBinary.Checked)
             {
-                DataContractSerializer serializer = new DataContractSerializer(typeof(Coord[]));
+                DataContractSerializer serializer = new DataContractSerializer(typeof(Coord[]), knownTypes);
                 try
                 {
                     using(FileStream stream = new FileStream("suda.bin", FileMode.OpenOrCreate))
@@ -182,14 +192,16 @@ namespace fabrica
                     DrawArr();
                 }catch
                 {
-                    MessageBox.Show("Файл для с данными для десериализации не существует или поврежден.\n");
+                    MessageBox.Show("Файл для с данными для десериализации не существует или поврежден. Проверьте подключенные плагины.\n");
                 }
             }
             else
             {
-                DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(Coord[]));
+                DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(Coord[]), knownTypes);
+
                 try
                 {
+
                     using (FileStream stream = new FileStream("suda.json", FileMode.OpenOrCreate))
                     {
                         objArr = (Coord[])serializer.ReadObject(stream);
@@ -199,7 +211,7 @@ namespace fabrica
                 }
                 catch
                 {
-                    MessageBox.Show("Файл для с данными для десериализации не существует или поврежден.\n");
+                    MessageBox.Show("Файл для с данными для десериализации не существует или поврежден. Проверьте подключенные плагины.\n");
                 }
                 
             }
@@ -219,6 +231,38 @@ namespace fabrica
                 clicked = false;
             }
             DrawArr();
+        }
+
+        private void pluginsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog()
+            {
+                Filter = "Динамическая библиотека (*.dll)|*.dll"
+            };
+            /*
+
+            string myDllPath = "\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\BrushPlugin\\bin\\Debug\\BrushPlugin.dll";
+            byte[] dll = File.ReadAllBytes(myDllPath);
+            if (Signature.Signature.Sign(dll, "\\\\Mac\\Home\\Documents\\oop\\lab2_fabrica\\SignedBrushPlugin"))
+                Console.WriteLine("Чекай все успешно");*/
+            openFileDialog.ShowDialog();
+            byte [] newDll = File.ReadAllBytes(openFileDialog.FileName);
+            if(Signature.Signature.Verify(newDll, Path.GetDirectoryName(openFileDialog.FileName)))
+            {
+                List<Factory> fact = PluginLoader.LoadPlugin(openFileDialog.FileName);
+                if (fact != null)
+                {
+                    foreach (Factory factory in fact)
+                    {
+                        factories.Add(factory);
+                        cmbBox.Items.Add(factory.Name());
+
+                    }
+                }
+            }else{
+                MessageBox.Show("Unable to verify signature");
+            }
+            
         }
     }
 

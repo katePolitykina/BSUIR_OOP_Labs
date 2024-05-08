@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Runtime.Serialization;
 
-namespace fabrica
+namespace cosmetics
 {
     [DataContract]
     public class Mascara:DecorativeCosmetics

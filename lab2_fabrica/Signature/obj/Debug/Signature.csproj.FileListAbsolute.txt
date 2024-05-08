@@ -1,0 +1,16 @@
+\\Mac\Home\Documents\oop\lab2_fabrica\Signature\bin\Debug\Signature.dll
+\\Mac\Home\Documents\oop\lab2_fabrica\Signature\bin\Debug\Signature.pdb
+\\Mac\Home\Documents\oop\lab2_fabrica\Signature\bin\Debug\System.Memory.dll
+\\Mac\Home\Documents\oop\lab2_fabrica\Signature\bin\Debug\System.Text.Json.dll
+\\Mac\Home\Documents\oop\lab2_fabrica\Signature\bin\Debug\System.Numerics.Vectors.dll
+\\Mac\Home\Documents\oop\lab2_fabrica\Signature\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+\\Mac\Home\Documents\oop\lab2_fabrica\Signature\bin\Debug\System.Buffers.dll
+\\Mac\Home\Documents\oop\lab2_fabrica\Signature\bin\Debug\System.ValueTuple.dll
+\\Mac\Home\Documents\oop\lab2_fabrica\Signature\bin\Debug\System.Text.Encodings.Web.dll
+\\Mac\Home\Documents\oop\lab2_fabrica\Signature\bin\Debug\System.Threading.Tasks.Extensions.dll
+\\Mac\Home\Documents\oop\lab2_fabrica\Signature\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+\\Mac\Home\Documents\oop\lab2_fabrica\Signature\obj\Debug\Signature.csproj.AssemblyReference.cache
+\\Mac\Home\Documents\oop\lab2_fabrica\Signature\obj\Debug\Signature.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\oop\lab2_fabrica\Signature\obj\Debug\Signature.csproj.Up2Date
+\\Mac\Home\Documents\oop\lab2_fabrica\Signature\obj\Debug\Signature.dll
+\\Mac\Home\Documents\oop\lab2_fabrica\Signature\obj\Debug\Signature.pdb

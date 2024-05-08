@@ -1,10 +1,17 @@
-﻿namespace fabrica
+﻿using CosmeticsBase;
+using System;
+namespace cosmetics
 {
     public class MaskFactory : Factory
     {
-        public override Product Create(string name, string brand, double price)
+        public Product Create(string name, string brand, double price)
         {
             return new Mask(name, brand, price, "Hyalyronic Acid", 20, "Sheet mask");
         }
+        public string Name()
+        {
+            return "Mask";
+        }
+        public Type CreatedClassName() { return typeof(Mask); }
     }
 }

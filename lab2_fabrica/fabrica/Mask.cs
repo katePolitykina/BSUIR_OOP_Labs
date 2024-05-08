@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace fabrica
+namespace cosmetics
 {
     [DataContract]
     public class Mask: SkinCare
